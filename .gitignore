@@ -23,3 +23,8 @@ build
 
 # ubuntu process files
 .nfs*
+.idea/ud-annotatrix-test.iml
+.idea/ud-annotatrix-test.iml
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml

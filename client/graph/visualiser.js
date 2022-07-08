@@ -234,6 +234,7 @@ function drawDeprels() {
     let initialOffset = xpos1 - dir * 15; // Deprel is offset a little when coming out of source
     let height = (d.enhanced ? -1 : 1) * h * edgeHeight; // actual height of deprel
     let mid = (initialOffset + xpos2) / 2; // x-position of the middle of the deprel
+    let enh = d.enhanced ? 0:5 // sub enhanced boolean for number
 
     // Calculate dimensions of text
     //let transform = d3.zoomTransform(_g.node());
@@ -253,6 +254,7 @@ function drawDeprels() {
       .attr("class", d.classes)
       .attr("attr", d.attr)
       .style("stroke-width", "4px")
+      .style("stroke-dasharray", "5,"+enh)
       .style("fill", "none")
       .attr("marker-end", "url(#end)")
       .attr("d", curve(initialOffset, ypos1, xpos2, dir, rectWidth, h, height, d.id, d.enhanced))
