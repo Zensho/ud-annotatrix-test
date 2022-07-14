@@ -2,10 +2,10 @@
   "name": "notatrix",
   "version": "2.3.2",
   "description": "experimental notational system for ud-annotatrix, combines CoNLL-U and CG3",
-  "main": "src",
+  "main": "build/js/src",
   "scripts": {
-    "test": "mocha --max-old-space-size=8192 test/index.js",
-    "coverage": "nyc mocha --max-old-space-size=8192 test/index.js",
+    "test": "mocha -r ts-node/register --max-old-space-size=8192 test/index.js",
+    "coverage": "nyc mocha -r ts-node/register --max-old-space-size=8192 test/index.js",
     "document": "jsdoc2md src/*.js > build/docs.md",
     "build": "gulp",
     "build-watch": "gulp && gulp watch"
@@ -29,6 +29,7 @@
     "@babel/core": "^7.13.16",
     "@babel/preset-env": "^7.13.15",
     "@babel/register": "^7.13.16",
+    "@types/node": "^18.0.3",
     "babelify": "^10.0.0",
     "browserify": "^16.5.2",
     "chai": "^4.3.4",
@@ -41,6 +42,9 @@
     "mocha": "^5.2.0",
     "nyc": "^12.0.2",
     "sinon": "^5.1.1",
+    "tsify": "^5.0.4",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   }
